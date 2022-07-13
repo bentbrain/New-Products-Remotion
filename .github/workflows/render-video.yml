@@ -12,8 +12,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@main
-      - uses: actions/setup-node@main
-      - uses: FedericoCarboni/setup-ffmpeg@v1
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: npm i
