@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { FC } from 'react';
 import { spring, useCurrentFrame, useVideoConfig } from 'remotion';
+import '../../../assets/fonts.css'
 
 const ProductBox = styled.div`
 
@@ -23,7 +24,7 @@ const PricePill = styled.p`
 background-color: #ed193a ;
 border-radius: 100vw;
 padding: 0.5em;
-font-family: 'Boing';
+font-family: 'BNG S';
 font-weight: 900;
 color: white;
 align-self: flex-end;
@@ -33,26 +34,26 @@ box-shadow: 25px 20px 30px #0000001f ;
 `
 
 
-export const Product: FC<{title: string, url: string, lift: number, index:number, price:string}> =  ({title, url, lift, index, price}) => {
+export const Product: FC<{ title: string, url: string, lift: number, index: number, price: string }> = ({ title, url, lift, index, price }) => {
 
     let translateY = 0
     if (index % 2 == 0) {
         translateY = 0
     } else {
-         translateY = 10
+        translateY = 10
     }
 
     return (
         <>
-        <ProductBox style={{transform: `translateY(-${translateY}rem)`}}   > 
-        <img style={{maxWidth: "min(500rem, 100%)", minWidth: "26rem"}} src={url} alt="" />
-        {/* <p>{title}</p> */}
-        {/* <PricePill>${price}</PricePill> */}
-        </ProductBox>
+            <ProductBox style={{ transform: `translateY(-${translateY}rem)` }}   >
+                <img style={{ maxWidth: "min(500rem, 100%)", minWidth: "26rem" }} src={url} alt="" />
+                {/* <p>{title}</p> */}
+                {/* <PricePill>${price}</PricePill> */}
+            </ProductBox>
 
         </>
     )
 
-    
+
 
 }

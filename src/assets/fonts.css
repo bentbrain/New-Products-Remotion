@@ -1,0 +1,46 @@
+:root {
+    --kogan-red: #ed193a;
+    --kogan-grey: #4d4d4d;
+    --kogan-light-grey: rgb(247, 247, 247);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  @font-face {
+  font-family: Boing-Semibold;
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Semibold.woff2);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Semibold.woff);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Semibold.ttf);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Semibold.svg);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Semibold.eot);
+  }
+  @font-face {
+  font-family: Boing-Regular;
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Regular.woff2);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Regular.woff);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Regular.ttf);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Regular.svg);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Regular.eot);
+  }
+  @font-face {
+  font-family: Boing-Light;
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Light.woff2);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Light.woff);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Light.ttf);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Light.svg);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Light.eot);
+  }
+  @font-face {
+  font-family: "BNG S";
+  src: url("https://static.kogan.com/static/fonts/boing/subset-Boing-Semibold.woff2") format("woff2"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Semibold.woff") format("wofff"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Semibold.ttf") format("truetype"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Semibold.svg") format("svg"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Semibold.eot") format("eot");
+  }
+  @font-face {
+  font-family: "BNG R";
+  src: url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.woff2") format("woff2"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.woff") format("wofff"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.ttf") format("truetype"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.svg") format("svg"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.eot") format("eot");
+  }
+  @font-face {
+  font-family: "BNG L";
+  src: url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.woff2") format("woff2"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.woff") format("wofff"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.ttf") format("truetype"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.svg") format("svg"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.eot") format("eot");
+  }

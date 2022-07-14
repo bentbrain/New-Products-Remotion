@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { FC } from 'react';
 import { Easing, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
+import '../../assets/fonts.css'
 
 const ProductBox = styled.div`
 
@@ -13,7 +14,7 @@ text-align: center;
 gap: 1rem;
 border-radius: 2rem;
 color: white;
-font-family: 'boing';
+font-family: 'BNG S';
 font-weight: 900;
 font-size: 4.5rem;
 width: 100%;

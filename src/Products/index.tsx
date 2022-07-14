@@ -7,6 +7,7 @@ import collectionJson from '../assets/collection.json'
 import { FirstText } from './FirstText/text';
 import { BrandContainer } from './Brands';
 import audio from '../assets/audio.mp3'
+import '../assets/fonts.css'
 
 let url = 'http://localhost:8010/proxy/api/v1/products/?collection=new-products-7-days&store=au&page=1&order_by=featured'
 
@@ -31,7 +32,7 @@ width: 100%;
 height: 100%;
 background-color: #ed193a;
 font-size: 10rem;
-font-family: 'Boing';
+font-family: 'BNG S';
 font-weight: 200;
 gap: 2rem;
 padding: 2rem;
@@ -40,32 +41,6 @@ justify-content: center;
 align-items: center;
 `
 
-interface collection {
-    Meta: object;
-    Objects: [];
-    Search: boolean;
-    Department_filters: [];
-    Department_filters_redirect: object
-    Canonical_url: string
-    Collection: object
-    Display: object
-    Meta_title: string
-    Meta_generated: string
-    Keywords: []
-    Meta_description: string
-    Blurb: string
-    Extra: string
-    Accordion_enabled: boolean
-    Breadcrumbs: []
-    Is_filtered: boolean
-    experimentVariantId: any
-    experimentId: any
-    optimiseId: any
-    optimiseVariantId: any
-    searchIdParamName: string
-    Ssid: string
-
-}
 
 
 export const Products: React.FC<{ collectionData: string }> = ({ collectionData }) => {
