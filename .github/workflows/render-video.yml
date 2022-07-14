@@ -9,18 +9,27 @@ name: Render video
 jobs:
   render:
     name: Render video
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
+      - name: Checkout
+        uses: actions/checkout@main
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - run: npm i
-      - run: npm run build
+          node-version: 16
+          cache: 'npm'
+      - name: Install dependencies (ffmpeg and fonts)
+        run: |
+          sudo apt-get update -yqq
+          sudo apt-get install -yq --no-install-recommends \
+            ffmpeg \
+            fonts-noto-core fonts-noto-cjk fonts-noto-color-emoji fonts-noto-mono
+      - name: Render video
+        run: npm run build -- --props="./input-props.json"
+        env:
+          REMOTION_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload video
         uses: actions/upload-artifact@v3
         with:
           name: out.mp4
           path: out.mp4
-
