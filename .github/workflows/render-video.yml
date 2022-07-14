@@ -25,7 +25,7 @@ jobs:
             ffmpeg \
             fonts-noto-core fonts-noto-cjk fonts-noto-color-emoji fonts-noto-mono
       - name: Render video
-        run: npm run build -- --props="./input-props.json"
+        run: npm run build 
         env:
           REMOTION_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload video
