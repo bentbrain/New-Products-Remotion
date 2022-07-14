@@ -1,35 +1,28 @@
+name: Render video
 on:
   workflow_dispatch:
     inputs:
-      messageIds:
-        description: "Which message ids should it be?"
+      titleText:
+        description: "Which text should it say?"
         required: false
-        default: "b077588c-488f-458c-bf5a-33585850c3ae,dcd83c57-aa47-45a2-b41d-0bd8d3f95724"
-name: Render video
+        default: "Welcome to Remotion"
+      titleColor:
+        description: "Which color should it be in?"
+        required: false
+        default: "black"
 jobs:
   render:
     name: Render video
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@main
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: 'npm'
-      - name: Install dependencies (ffmpeg and fonts)
-        run: |
-          sudo apt-get update -yqq
-          sudo apt-get install -yq --no-install-recommends \
-            ffmpeg \
-            fonts-noto-core fonts-noto-cjk fonts-noto-color-emoji fonts-noto-mono
-      - name: Render video
-        run: npm run build 
-        env:
-          REMOTION_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Upload video
-        uses: actions/upload-artifact@v3
+      - uses: actions/checkout@main
+      - uses: actions/setup-node@main
+      - run: sudo apt update
+      - run: sudo apt install ffmpeg
+      - run: npm i
+      - run: npm run build 
+      - uses: actions/upload-artifact@v2
         with:
           name: out.mp4
-          path: out.mp4
+          path: out/video.mp4
+
